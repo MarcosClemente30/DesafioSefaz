@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+      
+	<ui:composition template="/templates/common.xhtml">	
+	<ui:define name="pageTitle">Principal</ui:define>
+	<ui:define name="pageHeader">Controle de Usuarios</ui:define>
+	<ui:define name="body">
+	  <h:form id="edicao"> 
+	  	<h:panelGrid columns="2">
+	  		<h:outputLabel value="Nome:" />
+	  		<h:inputText value="#{usuarioBean.usuario.nome}" />
+	  		
+	  		<h:outputLabel value="Email:" />
+	  		<h:inputText value="#{usuarioBean.Usuarios.email}" />
+	  		
+	  		<h:outputLabel value="Senha:" />
+	  		<h:inputText value="#{usuarioBean.usuarios.senha}" />
+	  		
+	  		<h:outputLabel value="Telefone:" />
+	  		<h:inputText value="#{usuarioBean.usuarios.telefone}" />
+	  		
+	  		
+	  		</h:outputLabel>
+	  	
+	  	</h:panelGrid>
+	  	
+	  	<h:commandButton value="adicionar" action="#{usuarioBean.adicionar}"/>
+	  	 
+	  </form>
+	</ui:define>
+	
+	</ui:composition>
+</html>
